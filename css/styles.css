@@ -2,19 +2,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,100;1,400&display=swap');
 
 * {
+    font-family: "Poppins", sans-serif;
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
 }
 
 /* Header */
-.imgContenedor {
-    align-items: center;
+header {
     background-image: url(../img/backgroundProfile.svg);
     background-size: cover;
     display: flex;
-    height: 188.189px;
+    flex-direction: column;
+    /* height: 188.189px; */
     justify-content: center;
+    align-items: center;
+}
+
+.imgContenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 188.189px;
 }
 
 .imgContenedor img {
@@ -23,49 +32,52 @@
     height: 150px;
 }
 
-/* Sobre mí */
-.espacio {
-    align-items: center;
-    background-color: #06083D;
-    border-bottom: 2px double #75517B;
-    display: flex;
-    height: 70px;
-    justify-content: center;
-    margin-top: -20px;
-}
-
+/* Enlace Sobre mí */
 .enlaceContenedor {
-    padding: 5px 10px;
-    border: 1px solid #4F105D;
+    background-color: #06083D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 60px;
+    border-bottom: 2px double #75517B;
+}
+
+.enlaceContenedor a {
     background-color: #75517B;
-    border-radius: 15px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.enlaceContenedor:hover {
-    background-color: #4F105D;
-}
-
-.enlace {
     color: #D0D3D4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    padding: 5px 15px;
     font-size: 15px;
+    letter-spacing: 1.5px;
     text-decoration: none;
     text-transform: uppercase;
+    border-radius: 15px;
+    border: 1px solid #4F105D;
+    transition: all 0.3s;
+    margin-top: -15px;
+}
+
+.enlaceContenedor a:hover {
+    background-color: #4F105D;
+    border: 1px solid #75517B;
 }
 
 /* Headings */
 .contenedorTitular {
-    align-items: center;
     background-color: #06083D;
     display: flex;
-    height: 60px;
     justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
 }
 
-.textoTitular {
+.contenedorTitular h1 {
     color: #75517B;
-    font-family: "Poppins";
     font-size: 35px;
     font-weight: 300;
     letter-spacing: 10px;
@@ -94,22 +106,20 @@ h3 {
 
 .datoPersonal {
     color: #4F105D;
-    font-family: "Poppins", sans-serif;
     font-size: 15px;
     font-weight: 500;
 }
 
 .dato {
     color: #1C2270;
-    font-family: "Poppins";
     font-size: 15px;
     font-weight: 300;
 }
 
 /* Formación académica y experiencia laboral */
 section:not(.acercaDe):not(.descripción) {
-    padding: 20px 0 30px 20px;
     background-color: #E8DAEF;
+    padding: 20px 0 30px 20px;
 }
 
 section:not(.datosContenedor) ul {
@@ -164,25 +174,35 @@ section br+span {
 /* Footer */
 footer {
     background-color: #75517B;
-    height: 37px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-left: 26px;
+    height: 37px;
+    gap: 20px;
 }
 
-.footerText {
+footer p {
     color: #E8DAEF;
     display: flex;
     letter-spacing: 4px;
-    font-family: "Poppins";
     font-size: 13px;
     font-weight: 100;
     text-transform: uppercase
 }
 
-i {
+.iconos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.iconos a {
+    transition: all ease-in-out 200ms;
     color: #D0D3D4;
     font-size: 20px;
-    padding-left: 26px;
+}
+
+.iconos a:hover {
+    transform: scale(1.2);
 }
